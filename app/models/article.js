@@ -1,18 +1,12 @@
 // Example model
 
-var mongoose = require('mongoose'),
-  Schema = mongoose.Schema;
 
-var ArticleSchema = new Schema({
-  title: String,
-  url: String,
-  text: String
-});
+function Article (opts) {
+  if(!opts) opts = {};
+  this.title = opts.title || '';
+  this.url = opts.url || '';
+  this.text = opts.text || '';
+}
 
-ArticleSchema.virtual('date')
-  .get(function(){
-    return this._id.getTimestamp();
-  });
-
-mongoose.model('Article', ArticleSchema);
+module.exports = Article;
 

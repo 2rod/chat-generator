@@ -9,7 +9,6 @@ var config = {
       name: 'chat-generator'
     },
     port: process.env.PORT || 3000,
-    db: 'mongodb://localhost/chat-generator-development'
   },
 
   test: {
@@ -18,7 +17,6 @@ var config = {
       name: 'chat-generator'
     },
     port: process.env.PORT || 3000,
-    db: 'mongodb://localhost/chat-generator-test'
   },
 
   production: {
@@ -27,7 +25,6 @@ var config = {
       name: 'chat-generator'
     },
     port: process.env.PORT || 3000,
-    db: 'mongodb://localhost/chat-generator-production'
   }
 };
 
